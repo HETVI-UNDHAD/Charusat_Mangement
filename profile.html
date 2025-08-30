@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="/html.css">
+   
+
+</head>
+<body>
+  <center>
+
+    <header>
+       CHARUSAT STUDENT PROFILE
+    </header>
+    <button><h2>Profile</h2></button>
+
+<table border="1">
+  <tr>
+    <td>NAME</td>
+    <td><input type="text" name="name"></td>
+    <td rowspan="5">Profile Photo</td>
+  </tr>
+  <tr>
+    <td>D.O.B</td>
+    <td><input type="date" name="dob"></td>
+  </tr>
+  <tr>
+    <td>AGE</td>
+    <td><input type="number" name="age"></td>
+  </tr>
+  <tr>
+    <td>BLOOD GROUP</td>
+    <td><input type="text" name="blood_group"></td>
+  </tr>
+  <tr>
+    <td>GENDER</td>
+    <td><input type="text" name="gender"></td>
+  </tr>
+</table>
+
+<h3>ACADEMIC INFORMATION</h3>
+
+<form action="submit_academic.php" method="post">
+  <p>Enrollment No: <input type="text" name="enrollment"></p>
+  <p>Department: <input type="text" name="department"></p>
+  <p>Program: <input type="text" name="program"></p>
+  <p>Institute Name: <input type="text" name="institute"></p>
+  <p>University Name: <input type="text" name="university"></p>
+  <p>Current Semester: <input type="text" name="semester"></p>
+  <p>Division: <input type="text" name="division"></p>
+  <p>
+    Gender:
+    <input type="radio" name="gender_radio" value="male"> Male
+    <input type="radio" name="gender_radio" value="female"> Female
+  </p>
+  <p>Mobile Number: <input type="tel" name="mobile"></p>
+  <p>Email: <input type="email" name="email"></p>
+</form>
+</center>
+
+</body>
+</html>
