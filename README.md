@@ -1,1 +1,0 @@
-# Charusat_Mangement
