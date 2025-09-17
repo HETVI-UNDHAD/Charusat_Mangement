@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CHARUSAT - About Us</title>
+  <link rel="stylesheet" href="/html.css">
+</head>
+<body>
+
+  <center>
+    <h1 class="'header"><u>CHARUSAT</u></h1>
+      <button><a href="/home.html" target="_blank">home</a></button>
+      <button><a href="/ABOUT US.html" target="_blank">About</a></button>
+       <button><a href="/login.html" target="_blank">Login</a></button>
+    
+      <button><a href="/REGISTER.html" target="_blank">Register</a></button><br><br>
+
+    <table border="1" width="1000" height="500">
+      <tr>
+        <td background="./photo/219_1529064437_4.jpg" valign="top">
+          
+          <center><h2>About Us</h2></center>
+
+         
+          <table bgcolor="white" width="90%" align="center">
+            <tr>
+              <td>
+                <p>
+                  The Student Portal is an integrated online platform developed to streamline and simplify
+                  student services in one place. It acts as a digital bridge between students and 
+                  the university's academic and administrative systems. <br><br>
+                  Its goal is to provide students with quick, secure, and easy access to essential academic
+                  information and university services.
+                </p>
+              </td>
+            </tr>
+   <br><br><br>
+            <tr>
+              <td>
+                 <div class="question">what is this ➕ </div>
+                 <div class="answer">apple</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                 <div class="question">hello hetvi ➕</div>
+                 <div class="answer">how are u</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                 <div class="question">dgfgouhfi ➕</div>
+                 <div class="answer">ihdsjf</div>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+  </center>
+
+
+  <script>
+   const question=document.querySelectorAll(".question");
+
+   question.forEach((question)=>{
+     question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = (answer.style.display === "block") ? "none" : "block";
+      });
+    });
+   
+
+  </script>
+
+</body>
+</html>

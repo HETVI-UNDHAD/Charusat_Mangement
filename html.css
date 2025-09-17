@@ -1,0 +1,145 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+body:hover{
+  transition:all;
+}
+.container, .main-box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 800px;
+  background-color: white;
+  margin: 40px auto;
+  padding: 20px 30px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+header, .header, h1 {
+  color: #ffffff;
+  background-color: #003366;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.button-group {
+  background-color: #003366;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.button-group button {
+  background-color: #003366;
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #004080;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+td.photo {
+  text-align: center;
+  font-style: italic;
+  background-color: #f9f9f9;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 20px;
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+input[type="email"] {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+h2, h3 {
+  color: #003366;
+  text-align: center;
+}
+
+.form-section p {
+  margin: 10px 0;
+}
+
+.submit-btn {
+  background-color: #003366;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+ul li a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+.question {
+  cursor: pointer; /* shows a hand icon on hover, indicates clickable */
+  background-color: #ddd;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.answer {
+  padding: 5px;
+  background-color: #f0f0f0;
+  margin-top: 5px;
+}

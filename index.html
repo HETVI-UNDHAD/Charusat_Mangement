@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CHARUSAT</title>
+    <link rel="stylesheet" href="/html.css">   
+</head>
+<body>
+  <center>
+    <img src="../photo/CHARUSAT_RGTD_LOGO.jpg" alt="charusat" width="1000px"><br>
+    <h1 class="header">Welcome to CHARUSAT Portal!</h1>
+    <div class ="button">
+      <center>
+      <button><a href="/index.html" target="_blank">home</a></button>
+      <button><a href="/ABOUT US.html" target="_blank">About</a></button>
+      <button><a href="/login.html" target="_blank">Login</a></button>
+      <button><a href="/REGISTER.html" target="_blank">Register</a></button><br><br>
+      </center>
+    </div>
+    <div class="Slider"></div>
+  
+  </center>
+
+  <script>
+    var index=0;
+    function showmessage(){
+      const message =["../photo/images.jpeg","../photo/219_1529064437_4.jpg","../photo/1500x500.jpeg"];
+      
+      document.querySelector(".Slider").innerHTML=`<img src="${message[index]}"width=1000px >`;
+      index = (index+1)%message.length;
+    }
+      setInterval(showmessage, 2000);
+      showmessage();
+  </script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+   <link rel="stylesheet" href="/html.css">
+</head>
+
+<body>
+  <center>
+    <img src="./photo/CHARUSAT_RGTD_LOGO.jpg" alt="charusat" width="1000px"><br>
+
+    <button><a href="/home.html" target="_blank">Home</a></button>
+    <button><a href="/ABOUT US.html" target="_blank">About</a></button>
+    <button><a href="/login.html" target="_blank">Login</a></button>
+    <button><a href="/REGISTER.html" target="_blank">Register</a></button><br><br>
+
+    <fieldset>
+      <p>
+        Register to Access CHARUSAT Student Service Portal<br>
+        Please fill out the form below to create your account.<br>
+        Make sure to enter accurate details as they will be used for verification and future communication.
+      </p>
+    </fieldset>
+
+   
+    <table border="1" >
+      <tr>
+        <th >STUDENT INFORMATION</th>
+      </tr>
+      <tr>
+        <td>Full Name</td>
+        <td><input type="text" id="fullname" placeholder="Enter name"><span id="s1"></span></td>
+      </tr>
+      <tr>
+        <td>Id</td>
+        <td><input type="text" id="id"placeholder="Enetr id"><span id="s2"></span></td>
+      </tr>
+      <tr>
+        <td>Email Id</td>
+        <td><input type="email" id="email"placeholder="Enter Mail"><span id="s3"></span></td>
+      </tr>
+      <tr>
+        <td>Mobile No</td>
+        <td><input type="tel" id="mobile"placeholder="Enter Mobile No"><span id="s4"></span></td>
+      </tr>
+      <tr>
+        <td>Department</td>
+        <td><input type="text" id="department"placeholder="Enter Department" ><span id="s5"></span></td>
+      </tr>
+      <tr>
+        <td>Semester</td>
+        <td><input type="number" id="semester"placeholder="Enter Semester"><span id="s6"></span></td>
+      </tr>
+      <tr>
+        <td>Fees</td>
+        <td><input type="number" id="fees"placeholder="Enter Fee"><span id="s7"></span></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><input type="text" id="address"placeholder="Enter Adrress"><span id="s8"></span></td>
+      </tr>
+    </table>
+
+    <br><br>
+
+  
+    <button onclick="validtion()" onclick="showAlert">Submit</button>
+  </center>
+
+  <script>
+    function validtion(){
+     let name=document.getElementById("fullname").value;
+     let Id=document.getElementById("id").value;
+     let Email=document.getElementById("email").value;
+     let Mobile=document.getElementById("mobile").value;
+     let dep=document.getElementById("department").value;
+     let sem=document.getElementById("semester").value;
+     let fee=document.getElementById("fees").value; 
+     let add=document.getElementById("address").value;
+      
+    let nameReg = /^[a-zA-Z\s]+$/ ;
+    let idReg = /^[0-9]{2}[a-zA-Z]{2}[0-9]{2}/;
+    let mailReg = /^[a-zA-Z0-9._%+-]+@charusat.edu.in$/;
+    let MobileReg = /^[0-9]{10}$/;
+    let depReg = /^[a-zA-Z]+$/;
+    let semReg = /^[1-8]$/;
+    let feeReg = /^[0-9]+$/;
+    let addReg = /^[a-zA-Z0-9]/;
+  
+      if(!nameReg.test(name)){
+       document.getElementById('s1').style.color = 'red';
+       document.getElementById('s1').innerHTML='invalid Name';
+      }
+      if(!idReg.test(Id)){
+       document.getElementById('s2').style.color = 'red';
+            document.getElementById('s2').innerHTML='invalid id';
+      }
+      if(!mailReg.test(Email)){
+       document.getElementById('s3').style.color = 'red';
+            document.getElementById('s3').innerHTML='invalid mail';
+      }
+      if(!MobileReg.test(Mobile)){
+      document.getElementById('s4').style.color = 'red';
+            document.getElementById('s4').innerHTML='invalid mobile no';
+      }
+      if(!depReg.test(dep)){
+        document.getElementById('s5').style.color = 'red';
+            document.getElementById('s5').innerHTML='invalid department';
+      }
+      if(!semReg.test(sem)){
+       document.getElementById('s6').style.color = 'red';
+            document.getElementById('s6').innerHTML='invalid semester';
+      }
+      if(!feeReg.test(fee)){
+       document.getElementById('s7').style.color = 'red';
+            document.getElementById('s7').innerHTML='invalid fee';
+      }
+      if(!addReg.test(add)){
+       document.getElementById('s8').style.color = 'red';
+            document.getElementById('s8').innerHTML='invalid address';
+      }
+      return true;
+    }
+    function showAlert() {
+      alert("Your form has been submitted!");
+    }
+  </script>
+</body>
+
+</html>

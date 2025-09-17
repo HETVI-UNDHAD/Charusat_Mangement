@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+  <style>
+    .answer {
+      display: none;
+      margin-left: 20px;
+    }
+
+    .question {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #Slider{
+      border: solid;
+    }
+  </style>
+</head>
+<body>
+  <h1>FAQ</h1>
+  <div class="FAQ">
+    <div class = "question"> What is DOM ? </div>
+    <div class = "answer">Document Object Model</div>
+  </div>
+  <div class="FAQ">
+    <div class = "question"> What is HTML ? </div>
+    <div class = "answer">Hyper Text Markup Language</div>
+  </div>
+
+  <h1>Slider</h1>
+  <div id="Slider"></div>
+
+  <script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach((question) => {
+      question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = (answer.style.display === "block") ? "none" : "block";
+      });
+    });
+   var index=0;
+    function showmessage(){
+      const message =["welcome to CHARUSAT","There is CSPIT and DEPSTAR","Admissions are now open"];
+      
+      document.getElementById("Slider").innerHTML=message[index];
+      index = (index+1)%message.length;
+    }
+      setInterval(showmessage, 2000);
+      showmessage();
+
+  </script>
+     
+
+</body>
+</html>
